@@ -1,0 +1,15 @@
+# iNSTALL RANCHER AS A CONTAINER USING DOCKER AS BELOW
+
+sudo docker run --privileged -d --restart=unless-stopped -p 80:80 -p 443:443 rancher/rancher
+
+# run the below and you will see that you ramcher contaioner is running. 
+
+docker ps
+
+#copy the docker server ip adress in your aws and paste in your web browser and click continue
+
+# MAKE SURE YOU COPY AND PASTE YOUR CONTAINER ID IN THE FOLLOWING COMMAND
+
+docker logs container-ID 2>&1 | grep "Bootstrap Password:"
+
+and then follow other instructions so you can login inti to your rancher UI.
